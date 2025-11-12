@@ -1,7 +1,7 @@
 # LeetCode.submission02
 
 ## PROBLEM:01
-### MOVE ZEROES TO THE END OF AN ARRAY
+### MOVE ZEROES AT THE END OF AN ARRAY
 ```c
 #include <stdio.h>
 
@@ -29,4 +29,32 @@ int main(){
     printf("\n");
     return 0;
 }
+```
+
+## PROBLEM:02
+### REVERSING STRING
+```c
+#include <stdio.h>
+
+void reverseString(char* str, int sSize){
+    for(int i =0; i<sSize/2; i++){
+        char temp = str[i];
+        str[i] = str[sSize-1-i];
+        str[sSize-1-i] = temp;
+    }
+}
+int main(){
+    char str[] = {'H', 'e', 'l', 'l', 'o'};
+    int sSize = sizeof(str)/sizeof(str[0]);
+
+    printf("After reversing the string:\n");
+    reverseString(str, sSize);
+    for(int i=0; i<sSize; i++){
+        printf("%c ", str[i]);
+    }
+    printf("\n");
+    return 0;
+
+}
+
 ```
